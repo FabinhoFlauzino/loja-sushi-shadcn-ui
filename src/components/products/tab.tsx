@@ -72,10 +72,6 @@ export async function ProductsTab() {
           </TabsContent>
         ))
       }
-
-      <TabsContent value="tab2" className="mt-6">
-        Conteúdo TAB 2
-      </TabsContent>
     </Tabs>
   )
 }
