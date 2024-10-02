@@ -6,8 +6,9 @@ import { useState } from "react";
 import { StepUser } from "./step-user";
 import { StepAddress } from "./step-address";
 import { StepFinish } from "./step-finish";
+import { CheckoutSteps } from "@/types/checkout-steps";
 
-type Steps = "user" | "address" | "finish"
+
 
 type Props = {
   open: boolean
@@ -16,7 +17,7 @@ type Props = {
 
 
 export function CkeckoutDialog({ open, onOpenChange }: Props) {
-  const [step, setStep] = useState<Steps>('user')
+  const [step, setStep] = useState<CheckoutSteps>('user')
 
   let progressPct = 0
   switch (step) {
